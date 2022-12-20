@@ -1,0 +1,146 @@
+﻿<Window x:Class="job_provider.dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:job_provider"
+        mc:Ignorable="d"
+        Title="dashboard" Height="450" Width="800">
+    <Grid Background="#FF262945" Margin="0,0,0,-6" >
+
+        <Button x:Name="Load_partner_data" Content="PARTNER_LIST " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="217" Height="37" Margin="0,125,0,0" Background="#FF262945" Foreground="#FFF4EEEE" BorderBrush="#FFF6F3F3" Click="Load_partner_data_Click"/>
+        <Button Content= "CLIENT LIST " Name="our_client_data"  HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="216" Height="38" Margin="0,162,0,0" BorderBrush="#FFF9F2F2" Background="#FF262945" Foreground="#FFFCFAFA" Click="our_client_data_Click"/>
+        <Button Content="ADD NEW CLIENT" Name="add_new_client"  HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="217" Height="37" Margin="0,241,0,0" BorderBrush="#FFFFFDFD" Background="#FF262945" Foreground="#FFFCF4F4" Click="add_new_client_Click"  />
+        <Button Content="AVAIBLE VACANCY" Name="available_vacancy_btn" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="217" Height="41" Margin="-1,200,0,0" Foreground="#FFF4EFEF" BorderBrush="#FFFCF5F5" Background="#FF262945" Click="available_vacancy_btn_Click"/>
+        <Button Content="ADD PARTNER" Name="add_new_partner" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="217" Height="41" Margin="0,278,0,0" Background="#FF262945" BorderBrush="#FFFAF3F3" Foreground="#FFFAF6F6" Click="add_new_partner_Click" />
+        <Button Content="ADD VACANCY" Name="add_new_vacancy"  HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="217" Height="41" Margin="0,319,0,0" Background="#FF262945" BorderBrush="#FFF4ECEC" Foreground="#FFF9F2F2" Click="add_new_vacancy_Click" />
+
+        <Image HorizontalAlignment="Left" Height="86" Margin="77,0,0,0" VerticalAlignment="Top" Width="70" Source="https://st.depositphotos.com/1144472/1971/i/600/depositphotos_19714321-stock-photo-young-happy-smiling-business-man.jpg"/>
+        <Label Content="John" HorizontalAlignment="Left" Margin="90,86,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="95" Foreground="#FFF7F0F0"/>
+        <Button Content="Logout" Name="logout_btn" HorizontalAlignment="Left" Margin="54,376,0,0" VerticalAlignment="Top" Width="110" Height="37" FontWeight="Bold" FontSize="14" Foreground="#FFFAF7F7" BorderBrush="#FFF6ECEC" Background="#FF262945" Click="logout_btn_Click"/>
+        <Border BorderBrush="#FFFFFCFC" BorderThickness="1" Margin="-5,1,558,-2"/>
+
+        <Grid Visibility="Hidden"   x:Name="ADD_VACANCY" Margin="217,-2,0,0" Background="#FF262945">
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="173*"/>
+                <RowDefinition Height="263*"/>
+            </Grid.RowDefinitions>
+            <Label Content="JOINING DATE" HorizontalAlignment="Left" Margin="8,91,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="127" Foreground="#FFF6EFEF"/>
+            <Label Content="SALARY" HorizontalAlignment="Left" Margin="8,130,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="202" Foreground="#FFF6EFEF"/>
+            <Label Content="TYPES OF WORK" HorizontalAlignment="Left" Margin="8,69,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="202" Grid.Row="1" Foreground="#FFF6EFEF"/>
+            <Label Content="MINIMUM QUALIFICATION" HorizontalAlignment="Left" Margin="8,170,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="202" Grid.RowSpan="2" Foreground="#FFF6EFEF"/>
+            <Label Content="EXPERIENCE" HorizontalAlignment="Left" Margin="8,31,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="202" Grid.Row="1" Foreground="#FFF6EFEF"/>
+            <Label Content="DRIVING LICENSE REQUIRED?" HorizontalAlignment="Left" Margin="8,103,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="202" Grid.Row="1" Foreground="#FFF6EFEF"/>
+            <Label Content="UNSPENT CRIMINAL CONVICTION?" HorizontalAlignment="Left" Margin="8,137,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="248" Grid.Row="1" Foreground="#FFF6EFEF"/>
+            <DatePicker HorizontalAlignment="Left" Margin="275,97,0,0" VerticalAlignment="Top" Width="291" Height="29"/>
+            <TextBox HorizontalAlignment="Left" Margin="275,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="291" Height="29"/>
+            <TextBox HorizontalAlignment="Left" Margin="275,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="291" Height="29" Grid.Row="1"/>
+            <TextBox HorizontalAlignment="Left" Margin="275,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="291" Height="29" Grid.RowSpan="2"/>
+            <ComboBox HorizontalAlignment="Left" Margin="275,65,0,0" VerticalAlignment="Top" Width="291" Height="33" Grid.Row="1">
+
+                <ComboBoxItem Content="Driving" ></ComboBoxItem>
+                <ComboBoxItem Content="Gardening" ></ComboBoxItem>
+                <ComboBoxItem Content="Construction worker" ></ComboBoxItem>
+                <ComboBoxItem Content="Electrician" ></ComboBoxItem>
+                <ComboBoxItem Content="Plumber" ></ComboBoxItem>
+            </ComboBox>
+            <RadioButton Content="YES" HorizontalAlignment="Left" Margin="275,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="26" Width="64" Grid.Row="1">
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.374"/>
+                        <RotateTransform Angle="1.674"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Content="NO" HorizontalAlignment="Left" Margin="420,111,0,0" VerticalAlignment="Top" Height="22" Width="92" Grid.Row="1"/>
+            <RadioButton Content="YES" HorizontalAlignment="Left" Margin="275,143,0,0" VerticalAlignment="Top" Height="23" Width="62" RenderTransformOrigin="0.779,0.803" Grid.Row="1"/>
+            <RadioButton Content="NO" HorizontalAlignment="Left" Margin="420,141,0,0" VerticalAlignment="Top" Height="25" Width="107" RenderTransformOrigin="0.225,0.476" Grid.Row="1"/>
+            <Button Content="SAVE" Name="save_btn" HorizontalAlignment="Left" Margin="344,217,0,0" VerticalAlignment="Top" Width="134" Height="24" Foreground="#FF190202" Background="#FFEEE7E7" Grid.Row="1" FontWeight="Bold" Click="save_click"/>
+            <Button Content="RESET" HorizontalAlignment="Left" Margin="134,218,0,0" VerticalAlignment="Top" Width="134" Height="24" Foreground="#FF200808" Background="#FFFAF6F6" Grid.Row="1" FontWeight="Bold"/>
+            <Label Content="ADD NEW VACANCY" HorizontalAlignment="Left" Margin="97,10,0,0" VerticalAlignment="Top" FontSize="32" FontWeight="Bold" Width="369" Background="{x:Null}" Foreground="#FFF1E7E7"/>
+
+        </Grid>
+
+        <Grid Visibility="Hidden" Name="pop_up_window" Margin="305,194,297,116" Background="#FFF7EDED">
+            <Label Content="Your detail will save" HorizontalAlignment="Center" Margin="0,43,0,0" VerticalAlignment="Top" Foreground="#FF280606" FontWeight="Bold" FontSize="16" Background="{x:Null}"/>
+
+        </Grid>
+
+        <Grid Visibility="hidden" Name="partner_registration"   Margin="216,2,0,-2">
+            <Label Content="PARTNER REGISTRATION" HorizontalAlignment="Left" Margin="168,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FFF9F5F5"/>
+            <Label Content="ORGANISTION NAME :" HorizontalAlignment="Left" Margin="14,90,0,0" VerticalAlignment="Top" Width="167" FontSize="14" FontWeight="Bold" Foreground="#FFF7EDED"/>
+            <Label Content="ORGANISATION POSTCODE :" HorizontalAlignment="Left" Margin="14,153,0,0" VerticalAlignment="Top" Height="32" Width="199" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.496,0.808" Foreground="#FFF7EDED"/>
+            <Label Content="RECRUITMENT CONTACT NAME :" HorizontalAlignment="Left" Margin="14,188,0,0" VerticalAlignment="Top" Width="244" FontSize="14" FontWeight="Bold" Height="29" Foreground="#FFF7EDED"/>
+            <Label Content="ORGANISTION ADDRESS :" HorizontalAlignment="Left" Margin="14,119,0,0" VerticalAlignment="Top" Width="199" FontSize="14" FontWeight="Bold" Height="29" Foreground="#FFF7EDED"/>
+            <TextBox HorizontalAlignment="Left" Margin="291,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Height="29" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="292,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="29" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="290,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Height="30" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="291,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="29" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="290,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" FontSize="14" Height="28"/>
+            <Label Content="RECRUITMENT CONTACT ADDRESS :  " HorizontalAlignment="Left" Margin="14,254,0,0" VerticalAlignment="Top" Width="244" FontSize="14" FontWeight="Bold" Foreground="#FFF7EDED"/>
+            <TextBox HorizontalAlignment="Left" Margin="291,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" FontSize="14" Height="27"/>
+            <Label Content="RECRUITMENT CONTACT NUMBER" HorizontalAlignment="Left" Margin="14,220,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FFF7EDED"/>
+            <Button Content="RESET" HorizontalAlignment="Left" Margin="98,332,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="168" Height="31" RenderTransformOrigin="0.404,0.12"  Foreground="#FF262945" Background="#FFFDFCFC" BorderBrush="#FF262945"/>
+            <Button Content="REGISTER" Name="register_btn" HorizontalAlignment="Left" Margin="328,334,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="168" Height="31" RenderTransformOrigin="0.404,0.12" Background="#FFF6F7FA" Foreground="#FF262945" BorderBrush="#FFBE9797" Click="register_btn_Click"/>
+
+        </Grid>
+
+        <Grid Visibility="hidden"  Name="add_client" Margin="221,-2,0,2">
+            <Label Content="CLIENT REGISTRATION" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FFF9EFEF"/>
+            <Label Content="NAME :" HorizontalAlignment="Left" Margin="12,70,0,0" VerticalAlignment="Top" Width="135" FontSize="14" FontWeight="Bold" Background="{x:Null}" Foreground="#FFE5D6D6"/>
+            <Label Content="EMAIL :" HorizontalAlignment="Left" Margin="12,130,0,0" VerticalAlignment="Top" Height="27" Width="110" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.534,0.844" Background="{x:Null}" Foreground="#FFE5D6D6">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label Content="CONTACT NUMBER :" HorizontalAlignment="Left" Margin="12,157,0,0" VerticalAlignment="Top" Width="198" FontSize="14" FontWeight="Bold" Height="30" RenderTransformOrigin="0.544,0.553" Background="{x:Null}" Foreground="#FFF0E4E4"/>
+            <Label Content="CV UPLOAD :" HorizontalAlignment="Left" Margin="12,294,0,0" VerticalAlignment="Top" Width="198" FontSize="14" FontWeight="Bold" Background="{x:Null}" Foreground="#FFE5D6D6"/>
+            <Label Content="ADDRESS :" HorizontalAlignment="Left" Margin="12,101,0,0" VerticalAlignment="Top" Width="116" FontSize="14" FontWeight="Bold" Height="29" Background="{x:Null}" Foreground="#FFE5D6D6"/>
+            <Label Content="CATEGORY OF WORK:" HorizontalAlignment="Left" Margin="12,192,0,0" VerticalAlignment="Top" Width="232" FontSize="14" FontWeight="Bold" Background="{x:Null}" Foreground="#FFF0E4E4"/>
+            <Label Content="HAVE DRIVIG LICENSE ?" HorizontalAlignment="Left" Margin="12,226,0,0" VerticalAlignment="Top" Width="232" FontSize="14" FontWeight="Bold" Background="{x:Null}" Foreground="#FFF0E4E4"/>
+            <Label Content="MAXIMUM DISTANCE ?" HorizontalAlignment="Left" Margin="12,260,0,0" VerticalAlignment="Top" Width="232" FontWeight="Bold" FontSize="14" Height="29" Background="{x:Null}" Foreground="#FFE5D6D6"/>
+            <TextBox HorizontalAlignment="Left" Margin="203,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="366" Height="28" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="203,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364" Height="29" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="203,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Height="29" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="203,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Height="24" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="203,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="366" Height="29"/>
+            <RadioButton Content="YES&#xD;&#xA;" HorizontalAlignment="Left" Margin="203,231,0,0" VerticalAlignment="Top" Height="30" Width="87" FontSize="14" Foreground="#FFF4E8E8"/>
+            <RadioButton Content="NO" HorizontalAlignment="Left" Margin="475,232,0,0" VerticalAlignment="Top" FontSize="14" Height="28" RenderTransformOrigin="0.327,0.626" Width="62" Foreground="#FFF7F0F0">
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.448"/>
+                        <RotateTransform Angle="-0.508"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton> 
+            <Button Content="REGISTER" HorizontalAlignment="Left" Margin="330,380,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="154" Foreground="#FFFEF9F9" Background="#FF262945" BorderBrush="#FFF3EEEE"  Click="register_btn_Click"  />
+            <Button Content="UPLOAD FILE" HorizontalAlignment="Left" Margin="203,297,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Width="366"/>
+            <Button Content="RESET" HorizontalAlignment="Left" Margin="123,380,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="172" Background="#FF262945" Foreground="#FFF6EAEA" BorderBrush="#FFFCF1F1"/>
+            <ComboBox HorizontalAlignment="Left" Margin="203,201,0,0" VerticalAlignment="Top" Width="366"/>
+
+
+        </Grid>
+
+        <Grid Visibility="Hidden" Name="partner_detail_list" Margin="221,0,0,0">
+            <DataGrid  Height="440" HorizontalAlignment="Center" Name="Partner_data" VerticalAlignment="Center" Width="579" />
+        </Grid>
+        <Grid Visibility="Hidden" Name="client_detail_list" Margin="221,0,0,0">
+            <DataGrid  Height="440" HorizontalAlignment="Center" Name="client_data" VerticalAlignment="Center" Width="579"  />
+        </Grid>
+        <Grid Visibility="Hidden" Name="available_vacancy_detail_list" Margin="221,0,0,0">
+            <DataGrid  Height="440" HorizontalAlignment="Center" Name="vacancy_data" VerticalAlignment="Center" Width="579"  />
+        </Grid>
+
+    </Grid>
+</Window>
